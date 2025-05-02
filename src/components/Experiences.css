@@ -1,0 +1,62 @@
+.experiences {
+  padding: 20px;
+  font-family: "San Francisco", Arial, sans-serif;
+  color: #333;
+}
+
+.experiences h2 {
+  color: #1a73e8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.experiences-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience-entry {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.experience-entry:hover {
+  transform: translateY(-5px);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.experience-duration {
+  font-size: 14px;
+  color: #555;
+}
+
+.experience-company a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.experience-company a:hover {
+  text-decoration: underline;
+}
+
+.experience-description {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 10px;
+}

@@ -1,0 +1,12 @@
+.app {
+  font-family: "PixelFont", Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.desktop {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}

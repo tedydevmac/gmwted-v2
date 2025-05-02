@@ -1,0 +1,99 @@
+body {
+  cursor: url("../../public/cursor.png"), auto;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.desktop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: "San Francisco", Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Background Video */
+.desktop-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure the video stays in the background */
+}
+
+/* Profile Section */
+.profile-section {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(2px); /* Apply blur effect */
+  padding: 1rem; /* Optional: Add padding to ensure spacing */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.merow {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.profile-image {
+  width: 15rem;
+  height: 21rem;
+  border-radius: 45%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid #ffffff;
+  margin-bottom: 10px;
+}
+
+.profile-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 15px;
+  font-family: "Helvetica Neue";
+}
+
+/* Icons Section */
+.icons-row {
+  display: flex;
+  position: absolute;
+  bottom: 7.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 30px;
+  backdrop-filter: blur(2px);
+}
+.icons-row .icon {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.icons-row .icon:hover {
+  transform: scale(1.1);
+}
+
+.vertical-icons {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.vertical-icons .icon {
+  width: 3rem;
+  height: 3rem;
+  transition: transform 0.2s ease-in-out;
+  color: #ffffff;
+}
+
+.vertical-icons .icon:hover {
+  transform: scale(1.1);
+}

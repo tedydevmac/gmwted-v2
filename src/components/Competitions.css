@@ -1,0 +1,75 @@
+.competitions {
+  padding: 20px;
+  font-family: "San Francisco", Arial, sans-serif;
+  color: #333;
+}
+
+.competitions h2 {
+  color: #1a73e8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.competitions-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.competition-entry {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.competition-entry:hover {
+  transform: translateY(-5px);
+}
+
+.competition-date {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  min-width: 80px;
+  text-align: right;
+}
+
+.competition-details {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.competition-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.competition-title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.competition-description {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 5px 0 10px;
+}
+
+.competition-link {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.competition-link:hover {
+  text-decoration: underline;
+}

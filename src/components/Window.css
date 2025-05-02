@@ -1,0 +1,96 @@
+.window {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  opacity: 1; /* Default state */
+  transform: scale(1); /* Default state */
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e3e7ed;
+  padding: 8px 12px;
+  border-bottom: 1px solid #d1d1d1;
+  cursor: move; /* Enables drag functionality */
+}
+
+.window-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.close-button,
+.expand-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button {
+  background: #ff5f57; /* Red color */
+}
+
+.expand-button {
+  background: #28c940; /* Green color */
+}
+
+.window-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.window-content {
+  flex: 1;
+  padding: 16px;
+  background: #ffffff;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Animation */
+.opening-animation {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInScale 0.2s ease-in-out forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Add pulsing animation for expand button */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.expand-button.pulse {
+  animation: pulse 1s infinite;
+}

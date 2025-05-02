@@ -1,0 +1,20 @@
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.icon-image {
+  width: 5rem;
+  height: 5rem;
+  image-rendering: pixelated;
+}
+
+.icon-label {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: white;
+  text-shadow: 2px 2px #000;
+}
