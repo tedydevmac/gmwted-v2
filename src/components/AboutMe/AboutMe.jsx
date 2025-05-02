@@ -5,7 +5,7 @@ import { AboutMe } from "./components/Main";
 import { Footer } from "./components/Footer";
 const Container = styled.div`
   min-height: 100vh;
-  background-color: #f9fafb;
+  background-color: #111827;
   display: flex;
   flex-direction: column;
 `;

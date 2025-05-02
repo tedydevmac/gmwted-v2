@@ -45,8 +45,8 @@ const ProfileImage = styled.div`
   height: 16rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid white;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 4px solid #1f2937;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
   @media (min-width: 768px) {
     width: 20rem;
     height: 20rem;
@@ -60,7 +60,7 @@ const ProfileImage = styled.div`
 const Title = styled.h1`
   font-size: 2.25rem;
   font-weight: 700;
-  color: #111827;
+  color: #f3f4f6;
   margin-bottom: 1rem;
   @media (min-width: 768px) {
     font-size: 3rem;
@@ -69,7 +69,7 @@ const Title = styled.h1`
 const Subtitle = styled.h2`
   font-size: 1.25rem;
   font-weight: 500;
-  color: #4f46e5;
+  color: #818cf8;
   margin-bottom: 1.5rem;
   @media (min-width: 768px) {
     font-size: 1.5rem;
@@ -77,13 +77,13 @@ const Subtitle = styled.h2`
 `;
 const Description = styled.p`
   font-size: 1.125rem;
-  color: #374151;
+  color: #9ca3af;
   margin-bottom: 1.5rem;
 `;
 const Location = styled.div`
   display: flex;
   align-items: center;
-  color: #4b5563;
+  color: #9ca3af;
   margin-bottom: 1.5rem;
   svg {
     margin-right: 0.5rem;
@@ -94,74 +94,105 @@ const ButtonContainer = styled.div`
 `;
 const PrimaryButton = styled.a`
   display: inline-block;
-  background-color: #4f46e5;
-  color: white;
+  background-color: #818cf8;
+  color: #f3f4f6;
   padding: 0.75rem 1.5rem;
   border-radius: 0.375rem;
   font-weight: 500;
   margin-right: 1rem;
   transition: background-color 0.2s;
   &:hover {
-    background-color: #4338ca;
+    background-color: #6366f1;
   }
 `;
 const SecondaryButton = styled.a`
   display: inline-block;
-  border: 1px solid #4f46e5;
-  color: #4f46e5;
+  border: 1px solid #818cf8;
+  color: #818cf8;
   padding: 0.75rem 1.5rem;
   border-radius: 0.375rem;
   font-weight: 500;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
   &:hover {
-    background-color: #eef2ff;
+    background-color: #818cf8;
+    color: #f3f4f6;
+  }
+`;
+const Card = styled.div`
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border: 1px solid #374151;
+`;
+const SectionTitle = styled.h2`
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f3f4f6;
+  margin-bottom: 1.5rem;
+`;
+const ExperienceGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+`;
+const ExperienceCard = styled(Card)`
+  h3 {
+    color: #f3f4f6;
+    svg {
+      color: #818cf8;
+    }
+  }
+  h4 {
+    color: #e5e7eb;
+  }
+  p {
+    color: #9ca3af;
+  }
+  .date {
+    color: #818cf8;
+  }
+`;
+const ContactSection = styled(Card)`
+  background-color: #818cf8;
+  color: #f3f4f6;
+  border: none;
+  h2,
+  h3 {
+    color: #f3f4f6;
+  }
+  p {
+    color: #e5e7eb;
   }
 `;
 export function AboutMe() {
-  // Skills data
   const skills = [
-    {
-      name: "Web Development",
-      level: 90,
-    },
-    {
-      name: "UI/UX Design",
-      level: 85,
-    },
-    {
-      name: "JavaScript",
-      level: 95,
-    },
-    {
-      name: "React",
-      level: 90,
-    },
-    {
-      name: "Node.js",
-      level: 80,
-    },
-    {
-      name: "Python",
-      level: 75,
-    },
+    { name: "Web Development", level: 90 },
+    { name: "UI/UX Design", level: 85 },
+    { name: "JavaScript", level: 95 },
+    { name: "React", level: 90 },
+    { name: "Node.js", level: 80 },
+    { name: "Python", level: 75 },
   ];
   return (
     <Container>
-      {/* Hero Section */}
       <Section id="about">
         <Grid>
           <Content>
-            <Title>Hi, I'm Ted</Title>
-            <Subtitle>Software Developer</Subtitle>
+            <Title>Hi, I'm Your Name</Title>
+            <Subtitle>Software Developer & Designer</Subtitle>
             <Description>
-              I'm a full-stack software developer with experience in creating
-              websites and mobile applications. With over 4 years of experience,
-              I specialize in both front-end and back-end development, UI/UX
+              I'm a passionate software developer with expertise in creating
+              beautiful, functional websites and applications. With over 5 years
+              of experience, I specialize in front-end development, UI/UX
               design, and creating seamless user experiences.
             </Description>
             <Location>
               <MapPinIcon size={20} />
-              <span>Singapore</span>
+              <span>San Francisco, CA</span>
             </Location>
             <SocialLinks />
             <ButtonContainer>
@@ -179,97 +210,91 @@ export function AboutMe() {
           </ImageContainer>
         </Grid>
       </Section>
-      {/* About Section */}
-      <Section className="mb-20">
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">About Me</h2>
-          <p className="text-gray-700 mb-4">
+      <Section>
+        <Card>
+          <SectionTitle>About Me</SectionTitle>
+          <Description>
             I'm a software developer with a passion for creating elegant
             solutions to complex problems. My journey in tech began 5 years ago
             when I built my first website, and I've been hooked ever since.
-          </p>
-          <p className="text-gray-700 mb-4">
+          </Description>
+          <Description>
             I believe in writing clean, maintainable code and creating intuitive
             user experiences. Whether I'm working on a website, mobile app, or
             other digital product, my goal is always to build something that
             people love to use.
-          </p>
-          <p className="text-gray-700">
+          </Description>
+          <Description>
             When I'm not coding, you can find me hiking in the mountains,
             reading science fiction, or experimenting with new recipes in the
             kitchen.
-          </p>
-        </div>
+          </Description>
+        </Card>
       </Section>
-      {/* Skills Section */}
-      <Section id="skills" className="mb-20">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">My Skills</h2>
+      <Section id="skills">
+        <SectionTitle>My Skills</SectionTitle>
         <SkillsList skills={skills} />
       </Section>
-      {/* Experience Section */}
-      <Section id="experience" className="mb-20">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
-          Experience & Education
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-              <BriefcaseIcon className="h-5 w-5 mr-2 text-indigo-600" />
+      <Section id="experience">
+        <SectionTitle>Experience & Education</SectionTitle>
+        <ExperienceGrid>
+          <ExperienceCard>
+            <h3 className="text-xl font-bold mb-4 flex items-center">
+              <BriefcaseIcon size={20} className="mr-2" />
               Work Experience
             </h3>
             <div className="mb-6">
-              <h4 className="text-lg font-semibold text-gray-900">
+              <h4 className="text-lg font-semibold">
                 Senior Developer at Tech Company
               </h4>
-              <p className="text-indigo-600">2020 - Present</p>
-              <p className="text-gray-700 mt-2">
+              <p className="date">2020 - Present</p>
+              <p className="mt-2">
                 Led development of multiple web applications, improving
                 performance by 40% and implementing new features that increased
                 user engagement.
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-semibold text-gray-900">
+              <h4 className="text-lg font-semibold">
                 Web Developer at Startup
               </h4>
-              <p className="text-indigo-600">2018 - 2020</p>
-              <p className="text-gray-700 mt-2">
+              <p className="date">2018 - 2020</p>
+              <p className="mt-2">
                 Built responsive websites and applications for various clients,
                 focusing on modern JavaScript frameworks and accessibility.
               </p>
             </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-              <GraduationCapIcon className="h-5 w-5 mr-2 text-indigo-600" />
+          </ExperienceCard>
+          <ExperienceCard>
+            <h3 className="text-xl font-bold mb-4 flex items-center">
+              <GraduationCapIcon size={20} className="mr-2" />
               Education
             </h3>
             <div className="mb-6">
-              <h4 className="text-lg font-semibold text-gray-900">
+              <h4 className="text-lg font-semibold">
                 Master's in Computer Science
               </h4>
-              <p className="text-indigo-600">University Name, 2018</p>
-              <p className="text-gray-700 mt-2">
+              <p className="date">University Name, 2018</p>
+              <p className="mt-2">
                 Specialized in software engineering and human-computer
                 interaction. Graduated with honors.
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-semibold text-gray-900">
+              <h4 className="text-lg font-semibold">
                 Bachelor's in Information Technology
               </h4>
-              <p className="text-indigo-600">University Name, 2016</p>
-              <p className="text-gray-700 mt-2">
+              <p className="date">University Name, 2016</p>
+              <p className="mt-2">
                 Focused on web development and database management. Completed
                 several notable projects.
               </p>
             </div>
-          </div>
-        </div>
+          </ExperienceCard>
+        </ExperienceGrid>
       </Section>
-      {/* Contact Section */}
-      <Section id="contact" className="mb-10">
-        <div className="bg-indigo-700 rounded-lg shadow-md p-8 text-white">
+      <Section id="contact">
+        <ContactSection>
           <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
           <p className="mb-6">
             I'm always open to discussing new projects, creative ideas or
@@ -288,7 +313,7 @@ export function AboutMe() {
               <SocialLinks light />
             </div>
           </div>
-        </div>
+        </ContactSection>
       </Section>
     </Container>
   );

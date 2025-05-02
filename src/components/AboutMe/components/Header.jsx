@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { MenuIcon } from "lucide-react";
 const HeaderContainer = styled.header`
-  background-color: white;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background-color: #1f2937;
+  border-bottom: 1px solid #374151;
 `;
 const HeaderContent = styled.div`
   max-width: 72rem;
@@ -30,7 +30,7 @@ const Logo = styled.div`
 const LogoText = styled.h1`
   font-size: 1.25rem;
   font-weight: 700;
-  color: #111827;
+  color: #f3f4f6;
 `;
 const Nav = styled.nav`
   display: none;
@@ -40,12 +40,12 @@ const Nav = styled.nav`
   }
 `;
 const NavLink = styled.a`
-  color: #111827;
+  color: #e5e7eb;
   padding: 0.5rem 0.75rem;
   font-weight: 500;
   transition: color 0.2s;
   &:hover {
-    color: #4f46e5;
+    color: #818cf8;
   }
 `;
 const MobileMenuButton = styled.button`
@@ -54,10 +54,10 @@ const MobileMenuButton = styled.button`
   }
   padding: 0.5rem;
   border-radius: 0.375rem;
-  color: #374151;
+  color: #9ca3af;
   &:hover {
-    color: #111827;
-    background-color: #f3f4f6;
+    color: #e5e7eb;
+    background-color: #374151;
   }
   &:focus {
     outline: none;

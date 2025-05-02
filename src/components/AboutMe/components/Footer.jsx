@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 const FooterContainer = styled.footer`
-  background-color: #111827;
-  color: white;
+  background-color: #1f2937;
+  color: #e5e7eb;
   padding: 2rem 0;
+  border-top: 1px solid #374151;
 `;
 const FooterContent = styled.div`
   max-width: 72rem;
@@ -27,6 +28,7 @@ const FooterWrapper = styled.div`
 `;
 const Copyright = styled.p`
   margin-bottom: 1rem;
+  color: #9ca3af;
   @media (min-width: 768px) {
     margin-bottom: 0;
   }
@@ -42,7 +44,7 @@ const FooterLinks = styled.ul`
   gap: 1.5rem;
 `;
 const FooterLink = styled.a`
-  color: white;
+  color: #9ca3af;
   transition: color 0.2s;
   &:hover {
     color: #818cf8;
